@@ -42,18 +42,18 @@ func main() {
 }
 ```
 
-| Method | What it does | Credential |
-| --- | --- | --- |
-| `Index` | Every endpoint, and what each one costs in credentials | none |
-| `Ask` | A question about YouSpot, answered from its own pages | none |
-| `SearchDocs`, `ReadDoc`, `ListDocs` | The developer docs over the documentation MCP server | none |
-| `ReadMarkdown` | Any public page as markdown | none |
-| `Tools` | The tools on the product MCP server | none |
-| `CallTool` | One tool, as the member whose token the client holds | `YOUSPOT_TOKEN` |
-| `SandboxTools`, `CallSandboxTool` | The read tools over a demo account | none |
-| `Member`, `Directory` | Public profiles and the public directory | none |
-| `Batch` | Up to 20 reads in one round trip | none |
-| `Identity` | What identity the caller can hold here | optional |
+| Method                              | What it does                                           | Credential      |
+| ----------------------------------- | ------------------------------------------------------ | --------------- |
+| `Index`                             | Every endpoint, and what each one costs in credentials | none            |
+| `Ask`                               | A question about YouSpot, answered from its own pages  | none            |
+| `SearchDocs`, `ReadDoc`, `ListDocs` | The developer docs over the documentation MCP server   | none            |
+| `ReadMarkdown`                      | Any public page as markdown                            | none            |
+| `Tools`                             | The tools on the product MCP server                    | none            |
+| `CallTool`                          | One tool, as the member whose token the client holds   | `YOUSPOT_TOKEN` |
+| `SandboxTools`, `CallSandboxTool`   | The read tools over a demo account                     | none            |
+| `Member`, `Directory`               | Public profiles and the public directory               | none            |
+| `Batch`                             | Up to 20 reads in one round trip                       | none            |
+| `Identity`                          | What identity the caller can hold here                 | optional        |
 
 Every failure is a `*youspot.Error` carrying the HTTP status, the stable error code and the URL. `YOUSPOT_BASE_URL` overrides the origin.
 
