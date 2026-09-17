@@ -31,7 +31,7 @@ func main() {
 	tools, _ := c.Tools(ctx)
 	fmt.Println(string(tools))
 
-	demo, _ := c.CallSandboxTool(ctx, "search_graph_objects", map[string]any{"query": "consulting"})
+	demo, _ := c.CallSandboxTool(ctx, "search_graph_objects", map[string]any{"query": "Meridian"})
 	fmt.Println(string(demo))
 
 	summary, err := c.CallTool(ctx, "get_connections_summary", nil)
