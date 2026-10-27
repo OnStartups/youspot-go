@@ -35,7 +35,7 @@ func TestCallToolSendsTheBearerAndUnwrapsTheResult(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if got.path != "/mcp/v1" || got.auth != "Bearer tok" {
+	if got.path != "/mcp" || got.auth != "Bearer tok" {
 		t.Fatalf("sent %s with %q", got.path, got.auth)
 	}
 	var body map[string]any

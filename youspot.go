@@ -210,7 +210,7 @@ func (c *Client) ReadMarkdown(ctx context.Context, path string) (string, error) 
 
 // Tools lists the tools on the product MCP server. No credential.
 func (c *Client) Tools(ctx context.Context) (json.RawMessage, error) {
-	return c.rpc(ctx, "/mcp/v1", "tools/list", nil, "")
+	return c.rpc(ctx, "/mcp", "tools/list", nil, "")
 }
 
 // CallTool calls one tool on the product MCP server as the member whose
@@ -224,7 +224,7 @@ func (c *Client) CallTool(ctx context.Context, name string, arguments map[string
 	if arguments == nil {
 		arguments = map[string]any{}
 	}
-	return c.rpc(ctx, "/mcp/v1", "tools/call", map[string]any{"name": name, "arguments": arguments}, c.Token)
+	return c.rpc(ctx, "/mcp", "tools/call", map[string]any{"name": name, "arguments": arguments}, c.Token)
 }
 
 // SandboxTools lists the tools on the sandbox MCP server.
